@@ -48,8 +48,9 @@ brew install pyenv-virtualenv
 # echo 'eval "$(pyenv init -)"' >> ~/.zshrc
 # echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.zshrc
 
-# if install error like:
-# try: brew reinstall zlib bzip2
+# if install error like: error: implicit declaration of function 'sendfile' is invalid in C99
+# ref: https://github.com/pyenv/pyenv/issues/1643
+
 pyenv install 3.8.1
 pyenv global 3.8.1
 pip install -U pip
