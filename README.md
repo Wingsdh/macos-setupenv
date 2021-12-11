@@ -54,7 +54,8 @@ brew install pyenv-virtualenv
 pyenv install 3.8.1
 pyenv global 3.8.1
 pip install -U pip
-pip install ipython flake8 flake8-bugbear mccabe pycodestyle pyflakes python-language-server
+pip install ipython flake8 flake8-bugbear mccabe pycodestyle pyflakes python-lsp-server
+
 ```
 
 # neovim
