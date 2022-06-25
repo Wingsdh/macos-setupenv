@@ -15,14 +15,23 @@ brew tap homebrew/cask-fonts
 brew install --cask syncthing
 
 # Only if this is the first device
-# mkdir ~/Sync/conf/
+# mkdir ~/Sync/config/
 
-ln -s -f ~/Sync/conf/.zshrc ~/
+ln -s -f ~/Sync/config/.zshrc ~/
 ```
 
 # oh-my-zsh
 ``` zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+# k8s
+```
+brew install kubectl
+brew install kubectx
+```
+# powerlevel10k
+``` zsh
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 ```
 
 # tmux
@@ -39,7 +48,7 @@ config iterm2 run "tmux" when startup
 
 iterm2 -> profile -> Send text to at start: 
 ```
-tmux ls && read session && tmux attach -t ${session:-default} || tmux  new -s ${session:-default}"
+tmux ls && read session && tmux attach -t ${session:-default} || tmux  new -s ${session:-default}
 ```
 # pyenv
 ``` zsh
@@ -58,12 +67,11 @@ pip install ipython flake8 flake8-bugbear mccabe pycodestyle pyflakes python-lsp
 
 
 ```
-
 # neovim
 ``` zsh
 brew install neovim
 
-ln -s -f ~/Sync/conf/nvim/init.vim ~/.config/nvim/init.vim
+ln -s -f ~/Sync/config/nvim/init.vim ~/.config/nvim/init.vim
 ```
 * plugins
 ```
